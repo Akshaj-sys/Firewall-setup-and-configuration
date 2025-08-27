@@ -76,7 +76,7 @@ This ensured pfSense would act as a gateway between the internet (WAN side) and 
 **Step 4: Accessing pfSense GUI**
 
 - Opened browser in Ubuntu VM → accessed pfSense at:
-- <http://192.168.56.1>
+  ` <http://192.168.56.1> `
 - Default credentials: admin / pfsense.
 - Completed **setup wizard** and changed to a stronger password.
 
@@ -103,15 +103,16 @@ This ensured pfSense would act as a gateway between the internet (WAN side) and 
 
 Validated firewall and routing functionality by running pings:
 
-- ping 8.8.8.8 (Google DNS) 
-- ping google.com (DNS resolution) 
-- ping 192.168.56.1 (LAN gateway) 
-
+``` bash
+ping 8.8.8.8 (Google DNS) 
+ping google.com (DNS resolution) 
+ping 192.168.56.1 (LAN gateway) 
+```
 
 **Step 7: Firewall Testing with Nmap**
 
 - From Kali Linux, simulated attack with:
-- nmap -sS -p 1-200 192.168.56.1
+` nmap -sS -p 1-200 192.168.56.1 `
 - pfSense detected the scan and blocked packets as per configured rules.
 
 <img width="1904" height="764" alt="Screenshot 2025-08-17 201638" src="https://github.com/user-attachments/assets/aa085a73-dd3f-4dc9-a4e5-3c56a7c56d62" />
