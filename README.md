@@ -1,4 +1,4 @@
-# pfSense Firewall Setup and Configuration**
+# pfSense Firewall Setup and Configuration
 
 **Objective**
 
@@ -15,7 +15,6 @@ By the end of the project, the firewall was successfully configured to:
 
 - Network security
 - Access protocol
-- troubleshooting
 - logging and monitoring
 - pfsense
 
