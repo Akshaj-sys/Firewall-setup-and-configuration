@@ -30,7 +30,7 @@ By the end of the project, the firewall was successfully configured to:
 
 **Steps & Screenshots**
 
-**Step 1: pfSense ISO Download & VM Creation**
+*Step 1: pfSense ISO Download & VM Creation*
 
 - Downloaded pfSense Community Edition (amd64) installer ISO from the official Netgate website (cost: $0).
 - Extracted the ISO using 7-Zip.
@@ -47,7 +47,7 @@ By the end of the project, the firewall was successfully configured to:
 <img width="1171" height="703" alt="Screenshot 2025-08-17 201918" src="https://github.com/user-attachments/assets/8c855b82-dcb1-4d46-8091-c34395c25edc" />
 
 
-**Step 2: pfSense Installation & Interface Setup**
+*Step 2: pfSense Installation & Interface Setup*
 
 - Booted the VM and installed pfSense with default installation settings.
 - Powered off the VM and removed the ISO from storage to avoid reinstall.
@@ -60,13 +60,13 @@ By the end of the project, the firewall was successfully configured to:
 
 This ensured pfSense would act as a gateway between the internet (WAN side) and internal VMs (LAN side).
 
-**Step 3: Configuring Ubuntu & Kali Linux VMs**
+*Step 3: Configuring Ubuntu & Kali Linux VMs*
 
 - Opened Ubuntu VM → added Adapter 2: Host-Only Adapter (Promiscuous Mode: Allow VMs).
 - Repeat the same steps for Kali Linux VM.
 - Result: All three machines (pfSense, Ubuntu, Kali) were present on the same LAN via 192.168.56.0/24 subnet.
 
-**Step 4: Accessing pfSense GUI**
+*Step 4: Accessing pfSense GUI*
 
 - Opened browser in Ubuntu VM → accessed pfSense at: &lt;<http://192.168.56.1>&gt;
 - Default credentials: admin / pfsense.
@@ -74,7 +74,7 @@ This ensured pfSense would act as a gateway between the internet (WAN side) and 
 <img width="1187" height="398" alt="Screenshot 2025-08-16 180702" src="https://github.com/user-attachments/assets/0d0b9f40-6a5b-49ef-ae4c-fd9cc8ea2e35" />
 
 
-**Step 5: Firewall Rules Configuration**
+*Step 5: Firewall Rules Configuration*
 
 - By default, the WAN interface had rules:
   - Block private networks
@@ -89,11 +89,11 @@ This ensured pfSense would act as a gateway between the internet (WAN side) and 
   
 <img width="1194" height="593" alt="Screenshot 2025-08-17 201846" src="https://github.com/user-attachments/assets/ff143ece-a046-4f9b-88d3-281731b97d28" />
 
-**Step 6: Connectivity Verification**
+*Step 6: Connectivity Verification*
 
 Validated firewall and routing functionality by running pings:
 
-**Step 7: Firewall Testing with Nmap**
+*Step 7: Firewall Testing with Nmap*
 
 - From Kali Linux, simulated attack with: nmap -sS -p 1-200 192.168.56.1
 - pfSense detected the scan and blocked packets as per the configured rules.
@@ -110,7 +110,7 @@ This project successfully demonstrated the setup, configuration, and testing of 
 <img width="946" height="695" alt="Screenshot 2025-09-16 202527" src="https://github.com/user-attachments/assets/7228f3cb-707b-440b-a692-0099413d3a8c" />
 
 
-Key takeaways:
+**Key takeaways:**
 
 - PfSense installation and interface assignment were crucial for proper connectivity.
 - Firewall rules were tested and validated against real traffic.
