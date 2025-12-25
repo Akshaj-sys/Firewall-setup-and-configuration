@@ -110,7 +110,7 @@ This project successfully demonstrated the setup, configuration, and testing of 
 <img width="946" height="695" alt="Screenshot 2025-09-16 202527" src="https://github.com/user-attachments/assets/7228f3cb-707b-440b-a692-0099413d3a8c" />
 
 
-## Key takeaways:
+## Key takeaways
 
 - PfSense installation and interface assignment were crucial for proper connectivity.
 - Firewall rules were tested and validated against real traffic.
